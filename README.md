@@ -1,7 +1,7 @@
 # CPSC-349-Final-Project
 # HTML Project Setup and Execution
 
-This document explains how to run an HTML project using Visual Studio Code or by clicking this file link: 
+This document explains how to run an this project using Visual Studio Code or by clicking the URL link provided. 
 
 ## Option 1: Running the Project through VS Code
 
