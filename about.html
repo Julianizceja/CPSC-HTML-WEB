@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ceja's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        #about {
+            background-color: #00000055;
+        }
+        #about p {
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>
+                        Hi! I’m Julian Ceja, currently pursuing a bachelor’s degree in Computer Science. 
+                        As the first in my family to attend and graduate college, I take immense pride in this milestone. 
+                        I am passionate about problem-solving, thrive on tackling challenges, and have a deep interest 
+                        in innovation and technology. My strengths lie in being highly motivated, detail-oriented, 
+                        and committed to continuous learning. 
+                    </p>
+                    <p>
+                        My areas of interest include software development and artificial intelligence, and I aim to 
+                        use my skills to develop meaningful solutions that create a positive impact. Let's connect!
+                    </p>
+                    <a href="Julian Ceja Resume CPSC 349.pdf" class="btn btn-primary mt-3" download>Download Resume</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="OnlyOtherPic.jpeg" alt="Profile Picture" class="img-fluid rounded-circle mb-3 shadow" style="width: auto; height: 550px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

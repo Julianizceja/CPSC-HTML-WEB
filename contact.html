@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ceja's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        #contact {
+            background-color: #00000055;
+        }
+
+        #contact .form-control {
+            background-color: #00000055;
+            border: 1px solid #000000; 
+            color: #fff;
+        }
+
+        #contact .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7); 
+        }
+
+        #contact .form-control:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            background-color: #00000055;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <div class="mb-3">
+                    <input type="hidden" name="access_key" value="b7ae19ca-2617-4e83-b717-4d41d856b200">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Linked Images -->
+    <footer class="py-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <a href="https://github.com/Julianizceja" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/640px-Octicons-mark-github.svg.png" alt="Image 1" class="img-fluid" style="max-width: 80px;">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.instagram.com/juju_eyebrow/?hl=en" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Image 2" class="img-fluid" style="max-width: 80px;">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/julian-ceja-01087b341/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="Image 3" class="img-fluid" style="max-width: 80px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

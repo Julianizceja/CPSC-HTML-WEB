@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Ceja's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        #skills {
+            font-size: 1.8rem; 
+            background-color: #00000055; 
+        }
+        #skills .skill-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #skills .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 48px; 
+        }
+        #skills .skill-item img {
+            width: 44px; 
+            height: 44px; 
+            margin-right: 15px; 
+        }
+        #skills h5 {
+            text-align: center;
+            margin-bottom: 30px; 
+            font-size: 1.8rem; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Technical Skills</h5>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/911px-ISO_C%2B%2B_Logo.svg.png" alt="C++ Icon">
+                            <span>HTML, C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Python Icon">
+                            <span>Python, Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png" alt="Git Icon">
+                            <span>Bootstrap, Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png" alt="Node.js Icon">
+                            <span>Node.js, Express</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://static-00.iconduck.com/assets.00/react-original-wordmark-icon-840x1024-vhmauxp6.png" alt="React Icon">
+                            <span>React, Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>Non-Technical Skills</h5>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/8148/8148303.png" alt="Problem-Solving Icon">
+                            <span>Problem-Solving</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://png.pngtree.com/png-vector/20220811/ourmid/pngtree-businessman-hand-shaking-for-the-collaboration-png-image_6104218.png" alt="Team Collaboration Icon">
+                            <span>Team Collaboration</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://www.pngkey.com/png/full/131-1318263_group-people-communication-message-talk-comments-people-management.png" alt="Communication Icon">
+                            <span>Effective Communication</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://png.pngtree.com/png-vector/20220706/ourmid/pngtree-project-management-png-image_5687733.png" alt="Project Management Icon">
+                            <span>Project Management</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/12316/12316790.png" alt="Adaptability Icon">
+                            <span>Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

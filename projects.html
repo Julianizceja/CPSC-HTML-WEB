@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ceja's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        #projects {
+            background-color: #00000055;
+        }
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .project-container:nth-child(1) {
+            flex-direction: row-reverse;
+        }
+        .project-container img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        .project-description {
+            padding: 1rem;
+            flex: 1;
+        }
+        .project-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .project-description h5 {
+            font-size: 1.8rem; 
+        }
+
+        .project-description p {
+            font-size: 1.2rem; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="https://images.vexels.com/media/users/3/139972/isolated/preview/9b10a3a143d2a64abdd44cc96c4f4932-color-palette.png" alt="Project 1">
+                </div>
+                <div class="project-description">
+                    <h5>Color Picker</h5>
+                    <p>A tool that lets users upload an image and seamlessly change the color of any object within it, offering a simple yet powerful way to experiment with color adjustments and transformations.</p>
+                    <a href="https://github.com/Julianizceja/color-picker-Julianizceja" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="https://png.pngtree.com/png-vector/20240827/ourmid/pngtree-cute-cook-robot-png-image_13642616.png" alt="Project 2">
+                </div>
+                <div class="project-description">
+                    <h5>ChefGPT</h5>
+                    <p>A smart recipe generator that takes user input, such as available ingredients, and uses OpenAI's AI to suggest creative recipes tailored to those ingredients, helping users make the most of what they have on hand.</p>
+                    <a href="https://github.com/kkaushik03/FullyHacks-23" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-container">
+                <div class="project-image">
+                    <img src="https://png.pngtree.com/png-clipart/20230414/ourmid/pngtree-weather-icon-png-image_6685458.png" alt="Project 3">
+                </div>
+                <div class="project-description">
+                    <h5>Weather App</h5>
+                    <p>An interactive weather app that provides users with full customization options, allowing them to choose how they want weather data to be presented, whether it's through different layouts, units, or visual themes.</p>
+                    <a href="https://github.com/Julianizceja/Weather-Application/tree/main" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

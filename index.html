@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceja's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        #home .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        #home {
+            background-color: #00000055; 
+            color: #000000; 
+        }
+
+        .custom-navbar {
+            background-color: #05477a; 
+            border-bottom: 2px solid #000; 
+        }
+
+
+        .hello-text {
+            max-width: 50%;
+        }
+
+        .avatar-container {
+            position: relative;
+            max-width: 40%;
+            overflow: hidden; 
+        }
+
+        .avatar-container img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.5s ease;
+        }
+
+        .avatar-container:hover img {
+            transform: translateX(-100%); 
+        }
+
+        .bio-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            width: 80%;
+            text-align: center;
+        }
+
+        .avatar-container:hover .bio-text {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .navbar-center-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .navbar-center-img img {
+            height: 40px; 
+            width: auto;
+            cursor: pointer;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            font-size: 1.2rem; 
+            padding: 0.75rem 1.5rem; 
+            color: white;
+        }
+
+        .navbar {
+            letter-spacing: 0.05rem; 
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: white; 
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-10%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110%);
+                opacity: 0;
+            }
+        }
+
+        .snowflake {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            opacity: 0.8;
+            animation: snowfall 5s linear infinite;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg custom-navbar position-relative">
+        <div class="container">
+            <a class="navbar-brand">Ceja's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> 
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-center-img">
+                <img src="https://www.freeiconspng.com/uploads/christmas-hat-png-8.png" alt="Center Image" id="snow-trigger">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="vh-100 d-flex align-items-center justify-content-center text-center">
+        <div class="container">
+            <div class="hello-text">
+                <h1 class="display-4">Hello, I'm Julian Ceja</h1> 
+                <p class="lead">Quick with a quip, sharp in the game, and always laughing!</p>
+            </div>
+
+            <div class="avatar-container">
+                <img src="Ceja.png" alt="Your Avatar" class="rounded-circle mb-3">
+                <div class="bio-text">
+                    <p>I’m a dedicated and hardworking person with a competitive nature and a strong sense of trustworthiness. I’m known for facing challenges head-on and getting things done with integrity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sound Effect -->
+    <audio id="snow-sound" src="santa.mp3"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const snowTrigger = document.getElementById('snow-trigger');
+        const snowSound = document.getElementById('snow-sound');
+
+        snowTrigger.addEventListener('click', function() {
+            snowSound.play();
+
+            for (let i = 0; i < 100; i++) {
+                createSnowflake();
+            }
+        });
+
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.fontSize = Math.random() * 1.5 + 0.5 + 'rem';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 8000);
+        }
+    </script>
+</body>
+</html>
