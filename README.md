@@ -1,7 +1,7 @@
 # CPSC-349-Final-Project
 # HTML Project Setup and Execution
 
-This document explains how to run an this project using Visual Studio Code or by clicking the URL link provided. 
+This document explains how to run this project using Visual Studio Code or by clicking the URL link provided. 
 
 ## Option 1: Running the Project through VS Code
 
@@ -9,12 +9,12 @@ This document explains how to run an this project using Visual Studio Code or by
 
 2. **Open the Project in VS Code**  
 
-3. **Open the HTML file**  
+3. **Open the HTML files**  
 
 4. **Install Live Server**  
 
-5. **Open the HTML file in a browser**
+5. **Run a Live Server to open the HTML files in a browser**
    
-## Option 2: Using this Github Page Link to Open the HTML Files
-
+## Option 2: Using provided Github Page Link to Open the HTML Files
+**https://julianizceja.github.io/CPSC-349-Final-Project/**
 
