@@ -15,6 +15,3 @@ This document explains how to run this project using Visual Studio Code or by cl
 
 5. **Run a Live Server to open the HTML files in a browser**
    
-## Option 2: Using provided Github Page Link to Open the HTML Files
-**https://julianizceja.github.io/CPSC-349-Final-Project/**
-
